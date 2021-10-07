@@ -24,7 +24,7 @@ BRIGHT_GREEN = (102, 250, 250)
 
 # CONSTANTS
 bar_HEIGHT = 40
-WIDTH = 700  # also height - square GUI
+WIDTH = 900  # also height - square GUI
 
 pause_width, pause_height = 200, 400
 
@@ -34,8 +34,8 @@ BAR_WIDTH = WIDTH - 2 * WIDTH // 3 - 1
 
 button_width = 80
 button_height = 37
-ROWS = 35
-COLS = 50
+ROWS = 45
+COLS = 80
 clock = pygame.time.Clock()
 
 button_1_x = BAR_WIDTH // 10
@@ -358,7 +358,7 @@ def Clear(grid, end, start):
     start.set_start()
     end.set_end()
 
-    for i in range(11, 24):
+    for i in range(14, 31):
         for j in range(0, 3):
             grid[i][j].set_barrier()
 
@@ -487,7 +487,7 @@ def generate_maze(grid, draw2, endp, startp):
         end: Spot = grid[endp[0]][endp[1]]
         start.set_start()
         end.set_end()
-        for i in range(11, 24):
+        for i in range(14, 31):
             for j in range(0, 3):
                 grid[i][j].set_barrier()
         for elem in grid[0]:
@@ -828,7 +828,7 @@ def main(win, width):
     end: Spot = grid[ROWS - 5][ROWS - 5]
     start.set_start()
     end.set_end()
-    for i in range(11, 24):
+    for i in range(14, 31):
         for j in range(0, 3):
             grid[i][j].set_barrier()
 
